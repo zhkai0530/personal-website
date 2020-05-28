@@ -1,0 +1,64 @@
+/* 公共部分 */
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	color:#000;
+}
+/* 背景图 */
+body{
+	margin: 0;
+	background: #000 url(../img/shitou.jpg) no-repeat center center;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+/* 内容:导航栏 */
+.nav{
+	width: 100%;
+	line-height: 3.125rem;
+	background-color: #333;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+}
+.nav ul{
+	display: flex;
+	justify-content: center;
+}
+.nav ul li{
+	padding: 0 0.625rem;
+	/* cursor: pointer; */
+	border-left:1px solid #f0f0f0;
+}
+.nav ul li a{
+	display: inline-block;
+	line-height: 3.125rem;
+	color:#f0f0f0;
+}
+/* 内容:第一页 */
+.pageOne{
+	/* line-height: calc(%50 - 10px); */
+}
+.pageOne div{
+	color:#fff;
+	font-size: 4.4rem;
+	font-family: "华文行楷";
+	text-shadow: 0 1px hsl(0, 0%, 85%),0 2px hsl(0, 0%, 80%),0 3px hsl(0, 0%, 75%),0 4px hsl(0, 0%, 70%),0 5px hsl(0, 0%, 65%),0 5px 10px black; 
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.pageOne .firRow{
+	top:30%;
+}
+.pageOne .secRow{
+	top:70%;
+}
+/* 内容:第二页 */
+/* 内容:第三页 */
+/* 内容:第四页 */
