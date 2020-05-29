@@ -19,7 +19,7 @@ body{
 .nav{
 	width: 100%;
 	line-height: 3.125rem;
-	background-color: #333;
+	background-color: #000;
 	position:fixed;
 	top:0;
 	left:0;
@@ -32,20 +32,25 @@ body{
 .nav ul li{
 	padding: 0 0.625rem;
 	/* cursor: pointer; */
-	border-left:1px solid #f0f0f0;
+	border-left:1px solid #333;
+}
+.nav ul :nth-child(5){
+	border-right: 1px solid #333;
 }
 .nav ul li a{
 	display: inline-block;
 	line-height: 3.125rem;
 	color:#f0f0f0;
+	border: none;
 }
 /* 内容:第一页 */
 .pageOne{
 	/* line-height: calc(%50 - 10px); */
 }
 .pageOne div{
+	width: 70%;
 	color:#fff;
-	font-size: 4.4rem;
+	font-size: 5.5rem;
 	font-family: "华文行楷";
 	text-shadow: 0 1px hsl(0, 0%, 85%),0 2px hsl(0, 0%, 80%),0 3px hsl(0, 0%, 75%),0 4px hsl(0, 0%, 70%),0 5px hsl(0, 0%, 65%),0 5px 10px black; 
 	position:absolute;
@@ -58,6 +63,64 @@ body{
 }
 .pageOne .secRow{
 	top:70%;
+	text-align: end;
+}
+/*第一页动画 */
+.animateLf{
+	animation: fontLeft 1s ease-in;
+	-webkit-animation: fontLeft 1s ease-in;
+}
+@keyframes fontLeft{
+	0%   {left:-50%;opacity: 0}
+	90%  {left:50%;}
+	95% {left:48%;}
+	100% {left:50%;opacity: 1}
+}
+@-moz-keyframes fontLeft{
+	0%   {left:-50%;}
+	90%  {left:50%;}
+	95% {left:48%;}
+	100% {left:50%;}
+}
+@-o-keyframes fontLeft{
+	0%   {left:-50%;}
+	90%  {left:50%;}
+	95% {left:48%;}
+	100% {left:50%;}
+}
+@-webkit-keyframes fontLeft{
+	0%   {left:-50%;}
+	90%  {left:50%;}
+	95% {left:48%;}
+	100% {left:50%;}
+}
+.animateRt{
+	animation: fontRight 1s ease-in;
+	-webkit-animation: fontRight 1s ease-in;
+}
+@keyframes fontRight{
+	0%   {left:100%;opacity: 0;}
+	90%  {left:50%;}
+	95% {left:52%;}
+	100% {left:50%;opacity: 1;}
+}
+@-moz-keyframes fontRight{
+	0%   {left:100%;opacity: 0;}
+	90%  {left:50%;}
+	95% {left:52%;}
+	100% {left:50%;opacity: 1;}
+}
+@-o-keyframes fontRight{
+	0%   {left:100%;opacity: 0;}
+	90%  {left:50%;}
+	95% {left:52%;}
+	100% {left:50%;opacity: 1;}
+}
+@-webkit-keyframes fontRight{
+	0%   {left:100%;opacity: 0;}
+	90%  {left:50%;}
+	95% {left:52%;}
+	100% {left:50%;opacity: 1;}
 }
 /* 内容:第二页 */
 /* 内容:第三页 */
