@@ -20,6 +20,20 @@ $(window).ready(function(){
 		var index = $(this).index();
 		$(".page").eq(index).show();
 	})
+	$(window).on("mousewheel",function(event){
+		var e = event || window.event;
+		var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
+		
+		          (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
+		
+		if (delta > 0) {
+			console.log("wheelup");
+		} else if (delta < 0) {
+			if($(".page").show()){
+				console.log($(this).index())
+			}
+		}
+	})
 	function jump(){
 		// 给页面添加类：添加页面消失动画 
 		var $this = $(this);
