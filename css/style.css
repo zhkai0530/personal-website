@@ -65,6 +65,11 @@ body{
 	width: 30%;
 	font-size: 1.3rem;
 }
+.pst_pub{
+	top:30%;
+	color:#fff;
+	opacity: 0;
+}
 /* 内容:第一页 */
 .pageOne div{
 	width: 80%;
@@ -88,8 +93,8 @@ body{
 }
 /*第一页动画 */
 .pageOneAnimateLf{
-	animation: fontLeft 1s ease-in forwards;
-	-webkit-animation: fontLeft 1s ease-in forwards;
+	animation: fontLeft 1s ease-in 1s forwards;
+	-webkit-animation: fontLeft 1s ease-in 1s forwards;
 }
 @keyframes fontLeft{
 	0%   {left:-16%;opacity: 0;}
@@ -116,8 +121,8 @@ body{
 	100% {left:50%;opacity: 1;}
 }
 .pageOneAnimateRt{
-	animation: fontRight 1s ease-in 1s forwards;
-	-webkit-animation: fontRight 1s ease-in 1s forwards;
+	animation: fontRight 1s ease-in 2s forwards;
+	-webkit-animation: fontRight 1s ease-in 2s forwards;
 }
 @keyframes fontRight{
 	0%   {left:130%;opacity: 0;}
@@ -149,22 +154,26 @@ body{
 	height: 100%;
 	margin: 0 auto;
 }
-.pageTwo .content{
+.content{
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
 }
 .pageTwo .container .pst1{
 	top: 20%;
+	opacity: 0;
 }
 .pageTwo .container .pst2{
 	top: 60%;
 	color: #fff;
+	opacity: 0;
 }
 .container td,.container .content_title{
 	color: #fff;
 }
 /* 内容:第三页 */
+.pageThree .content{
+	align-items: center;
+}
 /* 内容:第四页 */
 /* 页面转换动画 */
 .pageAnimate{
@@ -172,19 +181,23 @@ body{
 }
 .pageAnimateLf{
 	left: -6%;
-	animation: pageAnimateLeft 1s ease-in forwards;
+	animation: pageAnimateLeft 1s ease-in 1s forwards;
+	-webkit-animation: pageAnimateLeft 1s ease-in 1s forwards;
 }
 .pageAnimateLf1{
 	left: -6%;
-	animation: pageAnimateLeft 1s ease-in 1s forwards;
+	animation: pageAnimateLeft 1s ease-in 2s forwards;
+	-webkit-animation: pageAnimateLeft 1s ease-in 2s forwards;
 }
 .pageAnimateRt{
 	left: 100%;
-	animation: pageAnimateRight 1s ease-in forwards;
+	animation: pageAnimateRight 1s ease-in 1s forwards;
+	-webkit-animation: pageAnimateRight 1s ease-in 1s forwards;
 }
 .pageAnimateRt1{
 	left: 100%;
-	animation: pageAnimateRight 1s ease-in 1s forwards;
+	animation: pageAnimateRight 1s ease-in 2s forwards;
+	-webkit-animation: pageAnimateRight 1s ease-in 2s forwards;
 }
 @keyframes pageAnimateLeft{
 	0%   {left:-6%; opacity:0;}
