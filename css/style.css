@@ -64,6 +64,8 @@ body{
 .detail_content{
 	width: 30%;
 	font-size: 1.3rem;
+	padding: 1.25rem;
+	text-shadow: 2px 2px 3px #000;
 }
 .pst_pub{
 	top:30%;
@@ -169,10 +171,15 @@ body{
 }
 .container td,.container .content_title{
 	color: #fff;
+	text-shadow: 2px 2px 3px #000;
 }
 /* 内容:第三页 */
 .pageThree .content{
 	align-items: center;
+}
+.company div,.company span{
+	color:#fff;
+	text-shadow: 2px 2px 3px #000;
 }
 /* 内容:第四页 */
 /* 页面转换动画 */
