@@ -18,8 +18,10 @@ $(window).ready(function(){
 	// 点击跳转
 	$(".nav li").click(function(){
 		$(".page").hide();
+		$(".nav li").removeClass("active");
 		var index = $(this).index();
 		$(".page").eq(index).show();
+		$(this).addClass("active");
 	})
 	// 鼠标滚动跳转
 	function mouseJump(onOff){
