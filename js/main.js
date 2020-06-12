@@ -14,45 +14,56 @@ $(window).ready(function(){
 	$(window).resize(function(){
 		setBgimgWH();
 	})
-	/*页面跳转*/
+	/*封装函数-页面跳转*/
+	function mouseJump(className,className2,obj,onOff,event){
+		var e = window.event || event;
+		var $this = $(obj);
+		var $index;
+		if(e.type == "mousewheel"){
+			$(className).each(function(){
+				var $this = $(this);
+				if($this.css("display")=="block"){
+					if(onOff){
+						console.log("xiangshang")
+						var $index = $this.index(className) + 1;
+						if($index >= $(className).length) $index = $(className).length - 1;
+					}else{
+						console.log("xiangxia")
+						$index = $this.index(className) - 1;
+						if($index < 0) $index = 0;
+					}
+				}
+			})
+			$(className).css("display","none");
+			$(className).eq($index).css("display","block");
+		}else if(e.type == "click"){
+			$(className2).hide();
+			var index = $this.index();
+			$(className2).eq(index).show();
+			$(className).removeClass("active");
+			$this.addClass("active");
+		}
+	}
 	// 点击跳转
-	$(".nav li").click(function(){
-		$(".page").hide();
-		$(".nav li").removeClass("active");
-		var index = $(this).index();
-		$(".page").eq(index).show();
-		$(this).addClass("active");
+	$(".nav li").on("click",function(){
+		mouseJump(".nav li",".page",this)
+		
 	})
 	// 鼠标滚动跳转
-	function mouseJump(onOff){
-		$(".page").each(function(){
-			if($(this).css("display")=="block"){
-				if(onOff){
-					$index = $(this).index(".page") + 1;
-					if($index >= $(".page").length) $index = $(".page").length - 1;
-				}else{
-					$index = $(this).index(".page") - 1;
-					if($index < 0) $index = 0;
-				}
-			}
-		})
-		$(".page").css("display","none");
-		$(".page").eq($index).css("display","block");
-	}
+
 	$(window).on("mousewheel",function(event){
 		var e = event || window.event;
 		var onOff = false;
-		var $index;
 		var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
 		
 		          (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
 		
 		if (delta > 0) {
 			onOff = false;
-			mouseJump(onOff);
+			mouseJump(".page",".nav",this,onOff);
 		} else if (delta < 0) {
 			onOff = true;
-			mouseJump(onOff);
+			mouseJump(".page",".nav",this,onOff);
 		}
 	})
 	function jump(){
