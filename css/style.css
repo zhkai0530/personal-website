@@ -21,7 +21,7 @@ body{
 	background-size: cover;
 	overflow: hidden;
 }
-/*各页面定位*/
+/*各页面定位--脱离文档流*/
 .page{
 	position: absolute;
 	top: 0;
@@ -43,18 +43,26 @@ body{
 	justify-content: center;
 }
 .nav ul li{
-	padding: 0 2%;
-	/* cursor: pointer; */
+	cursor: pointer;
+	width: 10%;
+	text-align: center;
 	border-left:1px solid #333;
 }
 .nav ul :nth-child(5){
 	border-right: 1px solid #333;
 }
 .nav ul li a{
-	display: inline-block;
+	display: block;
 	line-height: 3.125rem;
 	color:#f0f0f0;
 	border: none;
+}
+.nav .active{
+	background-color: #f0f0f0;
+	color:#000;
+}
+.nav .active a{
+	color:#000;
 }
 /*共同样式*/
 .content_title{
@@ -62,13 +70,12 @@ body{
 	font-size: 2.2rem;
 }
 .detail_content{
-	width: 30%;
+	width: 34%;
 	font-size: 1.3rem;
 	padding: 1.25rem;
 	text-shadow: 2px 2px 3px #000;
 }
 .pst_pub{
-	top:30%;
 	color:#fff;
 	opacity: 0;
 }
@@ -157,8 +164,10 @@ body{
 	margin: 0 auto;
 }
 .content{
+	height: 100%;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 .pageTwo .container .pst1{
 	top: 20%;
@@ -177,11 +186,19 @@ body{
 .pageThree .content{
 	align-items: center;
 }
-.company div,.company span{
+.company div,.company p{
 	color:#fff;
 	text-shadow: 2px 2px 3px #000;
 }
+.company:nth-child(1){
+	margin-top: 1rem;
+}
+/*内容：第三页和第四页相同样式*/
+
 /* 内容:第四页 */
+.pageFore .img-box img{
+	width: 30%;
+}
 /* 页面转换动画 */
 .pageAnimate{
 	position: absolute;
