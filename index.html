@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html id="fontSz">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>个人网站</title>
+		<!--  -->
 		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -13,21 +14,136 @@
 		<div class="box">
 			<div class="nav">
 				<ul>
-					<li><a href="#index">首页</a></li>
+					<li class="active"><a href="#index">首页</a></li>
 					<li><a href="#infomation">个人信息</a></li>
 					<li><a href="#experience">工作经历</a></li>
+					<li><a href="#showWorks">作品展示</a></li>
 					<li><a href="#skills">掌握技能</a></li>
 					<li><a href="#contact">联系方式</a></li>
 				</ul>
 			</div>
 			<div class="pageOne page" id="index">
-				<div class="firRow">等风来，不如逐风去</div>
-				<div class="secRow">最初的梦想，永不言弃！</div>
+				<div class="firRow pageOneAnimateLf">等风来，不如逐风去</div>
+				<div class="secRow pageOneAnimateRt">最初的梦想，永不言弃！</div>
 			</div>
-			<div class="pageTwo page" id="infomation"></div>
-			<div class="pageThree page" id="experience"></div>
-			<div class="pageFore page" id="skills"></div>
-			<div class="pageFive page" id="contact"></div>
+			<div class="pageTwo page" id="infomation">
+				<div class="container">
+					<div class="content">
+						<div class="content_title pageAnimate pageAnimateLf pst1">个人信息</div>
+						<div class="detail_content pageAnimate pageAnimateRt pst1">
+							<table>
+								<tr>
+									<td>姓名:</td>
+									<td>赵开</td>
+									<td>性别：</td>
+									<td>男</td>
+								</tr>
+								<tr>
+									<td>经验：</td>
+									<td>2年</td>
+									<td>Github:</td>
+									<td>zhkai0530@sina.com</td>
+								</tr>
+								<tr>
+									<td>期望工作：</td>
+									<td>Web前端</td>
+									<td>工作地点：</td>
+									<td>北京</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div  class="content">
+						<div class="content_title pageAnimate pageAnimateLf1 pst2">自我介绍</div>
+						<div class="detail_content pageAnimate pageAnimateRt1 pst2">
+							主攻前端，一年半前端开发经验，三个上线作品，包括电商和企业站。具有Geek精神，基本功扎实，工作认真负责，学习能力强，有较强理解能力，上手快、善攻坚，长于分析解决问题。乐于分享，喜欢学习新技术并将之运用在工作中。良好的编码习惯。具有良好的沟通能力和团队合作精神，具备很强的执行力。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pageThree page" id="experience">
+				<div class="container">
+					<div class="content">
+						<div class="content_title pageAnimate pageAnimateLf pst_pub title_box">工作经历</div>
+						<div class="detail_content pageAnimate pageAnimateRt pst_pub content_box">
+							<div class="company">
+								<div class="company_title">北京心网科技有限公司</div>
+								<div class="time_range">2015.06--2016.05</div>
+								<div class="job">前端开发</div>
+								<div class="work_content">
+									<p>工作职责：</p>
+									<p>1、根据需求开发公司官网（响应式）；</p>
+									<p>2、定期更新维护网站保证能够正常使用</p>
+								</div>
+								<div class="tips">
+									在此过程中，提升了对响应式布局和匹配各种移动端与兼容性的理解，增强了对JavaScript中API的理解。
+								</div>
+							</div>
+							<br />
+							<div class="company">
+								<div class="company_title">北京汇江海商贸有限公司</div>
+								<div class="time_range">2016.06--2017.02</div>
+								<div class="job">前端开发</div>
+								<div class="work_content">
+									<p>工作职责：</p>
+									<p>1、独立负责公司商城和官网的开发和维护工作，并进行测试</p>
+									<p>2、定期更新维护网站保证能够正常使用</p>
+								</div>
+								<div class="tips">
+									提高了对JavaScript API的理解，增加了对ECShop模板进行前端代码重构的经验，可以利用DW+HTML+CSS(3)+JavaScript+jQuery快速找到并修改其中的布局结构和动效。增长了手写响应式的经验。提高了解决浏览器兼容问题的经验（css Hark、条件注释）。
+									
+									增长了操作后台数据的经验，可以利用Navicat for MySQL对后台数据进行增添和管理。增长了与后台配合开发的经验。
+									
+									增长了使用Git进行版本控制的经验。
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pageFore page" id="showWorks">
+				<div class="container">
+					<div class="content">
+						<div class="content_title pageAnimate pageAnimateLf pst_pub title_box">作品展示</div>
+						<div class="detail_conteng pageAnimate pageAnimateRt pst_pub content_box">
+							<div class="img-content-box">
+								<div class="img-box">
+									<img src="img/hnsj.png" alt="惠侬商家商城" title="惠侬商家商城">
+								</div>
+								<div class="content-box">
+									<h5>惠侬商家</h5>
+									<p class="works-type">线上作品</p>
+									<p class="use-utilities">HTML+CSS+CSS3+JQ</p>
+									<p class="details">描 述：汇江海公司旗下商城，基于ECShop生鲜模板，根据设计要求，由我独立负责将最初的ECShop默认模板进行前端代码全面修改</p>
+									<p class="hard">所遇困难：系统是基于PHP语言及MYSQL数据库构架开发的跨平台开源程序，无法找到并修改前端代码</p>
+									<p class="harvest">收 获：通过查阅资料并学习，可以快速的找到并修改前端代码</p>
+									<p class="Hyperlinks">http://www.hnsj527.com/</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pageFive page" id="skills">
+				<div class="container">
+					<div class="content">
+						<div class="content_title pageAnimate pageAnimateLf pst_pub title_box">掌握技能</div>
+						<div class="detail_conteng pageAnimate pageAnimateRt pst_pub content_box">
+							<div class="canvas-box">
+								<canvas id="canvas"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pageSix page" id="contact">
+				<div class="container">
+					<div class="content">
+						<div class="content_title pageAnimate pageAnimateLf pst_pub title_box">联系方式</div>
+						<div class="detail_conteng pageAnimate pageAnimateRt pst_pub content_box"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
