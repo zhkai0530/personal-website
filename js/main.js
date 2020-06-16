@@ -25,7 +25,7 @@ $(window).ready(function(){
 				if($this.css("display")=="block"){
 					if(onOff){
 						console.log("xiangshang")
-						var $index = $this.index(className) + 1;
+						$index = $this.index(className) + 1;
 						if($index >= $(className).length) $index = $(className).length - 1;
 					}else{
 						console.log("xiangxia")
@@ -35,7 +35,9 @@ $(window).ready(function(){
 				}
 			})
 			$(className).css("display","none");
+			$(className2).removeClass("active");
 			$(className).eq($index).css("display","block");
+			$(className2).eq($index).addClass("active");
 		}else if(e.type == "click"){
 			$(className2).hide();
 			var index = $this.index();
@@ -60,15 +62,11 @@ $(window).ready(function(){
 		
 		if (delta > 0) {
 			onOff = false;
-			mouseJump(".page",".nav",this,onOff);
+			mouseJump(".page",".nav li",this,onOff);
 		} else if (delta < 0) {
 			onOff = true;
-			mouseJump(".page",".nav",this,onOff);
+			mouseJump(".page",".nav li",this,onOff);
 		}
 	})
-	function jump(){
-		// 给页面添加类：添加页面消失动画 
-		var $this = $(this);
-		var index = $this.index();
-	}
+
 })
