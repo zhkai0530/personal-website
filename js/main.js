@@ -131,12 +131,12 @@ $(window).ready(function(){
 	*/
    function getSize(){
        var obj = new Object;
-       obj.$width = document.body.clientWidth;
-       obj.$height = document.body.clientHeight;
+       obj.$width = window.screen.availWidth;
+       obj.$height = window.screen.availHeight;
        return obj;
    }
-   function setFontSize(){
-       var obj = getSize();
+   function setFontSize(getSize){
+       var obj = getSize;
        var fontShuliang = 40;
        var fontSizeRem = obj.$width / fontShuliang / 16;
        var fontSize = obj.$width / fontShuliang / fontSizeRem;
@@ -147,7 +147,6 @@ $(window).ready(function(){
 	   console.log("htmlFS.style.fontSize:"+htmlFS.style.fontSize)
    }
    window.onresize = function(){
-	   getSize();
-       setFontSize();
+       setFontSize(getSize());
    }
 })
