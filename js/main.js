@@ -129,4 +129,25 @@ $(window).ready(function(){
 	}
 	
 	*/
+   function getSize(){
+       var obj = new Object;
+       obj.$width = document.body.clientWidth;
+       obj.$height = document.body.clientHeight;
+       return obj;
+   }
+   function setFontSize(){
+       var obj = getSize();
+       var fontShuliang = 40;
+       var fontSizeRem = obj.$width / fontShuliang / 16;
+       var fontSize = obj.$width / fontShuliang / fontSizeRem;
+       var htmlFS = document.getElementsByTagName("html")[0];
+       htmlFS.style.fontSize = fontSize + "px";
+	   console.log("width:"+obj.$width)
+	   console.log("height:"+obj.$height)
+	   console.log("htmlFS.style.fontSize:"+htmlFS.style.fontSize)
+   }
+   window.onresize = function(){
+	   getSize();
+       setFontSize();
+   }
 })
