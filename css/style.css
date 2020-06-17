@@ -196,8 +196,47 @@ body{
 /*内容：第三页和第四页相同样式*/
 
 /* 内容:第四页 */
-.pageFore .img-box img{
+.container{
+	width: 80%;
+}
+.pageFore .title_box, .pageFore .detail_content{
+	height:80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.pageFore .content{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.pageFore .title_box{
+	width: 20%;
+}
+.pageFore .detail_content{
 	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin:2% 0;
+}
+.pageFore .img-box{
+	width: 80%;
+	height:40%;
+	margin: 5% 0;
+}
+img{
+	width: 100%;
+	cursor: pointer;
+}
+.pageFore .content-box{
+	margin: 2% 0;
+}
+.content-box p,h4{
+	color:#fafafa;
+	font-size: 0.9rem;
 }
 /* 页面转换动画 */
 .pageAnimate{
