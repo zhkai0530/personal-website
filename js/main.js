@@ -137,8 +137,10 @@ $(window).ready(function(){
    }
    function setFontSize(){
        var obj = getSize();
-       var fontShuliang = 40;
-       var fontSizeRem = obj.$width / fontShuliang / 16;
+       var fontShuliang = 40;//设计字数
+	   var setWidth = 980;//设计宽度
+	   var setFont = setWidth / fontShuliang;//设计字体像素
+       var fontSizeRem = obj.$width / fontShuliang;//实际字体像素
        var fontSize = obj.$width / fontShuliang / fontSizeRem;
        var htmlFS = document.getElementsByTagName("html")[0];
        htmlFS.style.fontSize = fontSize + "px";
