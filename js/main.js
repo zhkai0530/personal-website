@@ -135,8 +135,8 @@ $(window).ready(function(){
        obj.$height = window.screen.availHeight;
        return obj;
    }
-   function setFontSize(getSize){
-       var obj = getSize;
+   function setFontSize(){
+       var obj = getSize();
        var fontShuliang = 40;
        var fontSizeRem = obj.$width / fontShuliang / 16;
        var fontSize = obj.$width / fontShuliang / fontSizeRem;
@@ -147,6 +147,6 @@ $(window).ready(function(){
 	   console.log("htmlFS.style.fontSize:"+htmlFS.style.fontSize)
    }
    window.onresize = function(){
-       setFontSize(getSize());
+       setFontSize();
    }
 })
